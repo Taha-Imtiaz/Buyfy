@@ -1,11 +1,13 @@
-import React from 'react'
-
+import React from "react";
+import CategoryContainer from "../../Components/CategoryContainer/CategoryContainer";
+import "./Shop.css";
+import ContentContainer from "../../Components/ContentContainer/ContentContainer";
 const Shop = () => {
-    return (
-        <div>
-            <h1>Shop Page</h1>
-        </div>
-    )
-}
+  return (
+    <ContentContainer>
+      <CategoryContainer />
+    </ContentContainer>
+  );
+};
 
-export default Shop
+export default Shop;

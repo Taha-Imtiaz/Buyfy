@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import "./Auth.css";
+import AuthForms from "../../Components/AuthForms/AuthForms";
+
 
 const Auth = () => {
-    return (
-        <div>
-            <h1>Auth Page</h1>
-        </div>
-    )
-}
+  return (
+    <div className="auth-container">
+      <div className="auth-img"></div>
+      <div className="flex auth-form-area">
+        <AuthForms />
+      </div>
+    </div>
+  );
+};
 
-export default Auth
+export default Auth;
