@@ -4,10 +4,10 @@ import StyledInput from "../StyledInput/StyledInput";
 import Button from "../Button/Button";
 import Paragraph from "../Paragaraph/Paragraph";
 import { connect } from "react-redux";
-import { signin } from "../../Redux/user/userActions";
+import { googleLogin, signin } from "../../Redux/user/userActions";
 
 const SignInForm = (props) => {
-  var {signin} =props;
+  var {signin, googleLogin} =props;
 
   var [email, setEmail] = useState("");
   var [password, setPassword] = useState("");
@@ -46,7 +46,7 @@ const SignInForm = (props) => {
            <Paragraph fontSize = {12}>OR</Paragraph>
            </div>
 
-          <Button backgroundColor="black" color="white" type="submit">
+          <Button onClick = {googleLogin} backgroundColor="black" color="white" type="submit">
             SIGN IN WiTH GOOGLE
           </Button>
         </div>
@@ -55,7 +55,9 @@ const SignInForm = (props) => {
   );
 };
 var actions = {
-  signin
+  signin,
+  googleLogin
+
 }
 
 export default connect(null,actions)(SignInForm);
