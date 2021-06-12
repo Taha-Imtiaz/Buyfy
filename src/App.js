@@ -32,12 +32,12 @@ function App(props) {
                 email: userData.email,
                 uid: uid,
               };
-            props.setCurrentUser(userObj);
+              props.setCurrentUser(userObj);
             }
           }
         } else {
           // console.log("else")
-         props.removeCurrentUser();
+          props.removeCurrentUser();
         }
       } catch (error) {
         console.log(error);
